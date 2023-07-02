@@ -1,14 +1,14 @@
 public class NewMoney {
     public static void main(String[]arg)
     {
-        Money money = new Money(10, 50);
-        money.displayAmount(); // Виводиться "Amount: $10.50"
+        Money money = new Money(50, 50);
+        money.displayAmount();
 
         Product product = new Product("Phone", money);
-        System.out.println("Product: " + product.getName() + ", Price: $" + product.getPrice().getDollars() + "." + product.getPrice().getCents()); // Виводиться "Product: Phone, Price: $10.50"
+        System.out.println("Product: " + product.getName() + ", Price: $" + product.getPrice().getDollars() + "." + product.getPrice().getCents());
 
-        product.reducePrice(5);
-        System.out.println("New Price: $" + product.getPrice().getDollars() + "." + product.getPrice().getCents()); // Виводиться "New Price: $5.45"
+        product.reducePrice(500);
+        System.out.println("New Price: $" + product.getPrice().getDollars() + "." + product.getPrice().getCents());
 
     }
     static public class Money {
