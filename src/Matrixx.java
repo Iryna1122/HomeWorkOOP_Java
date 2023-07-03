@@ -2,8 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Matrixx {
-    public class Matrix<T extends Number> {
+ public class Matrixx {
+     static public class Matrix<T extends Number> {
         private T[][] matrix;
         private int rows;
         private int columns;
@@ -31,9 +31,8 @@ public class Matrixx {
 
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++) {
-                    // Generate random value based on the type T
-                    // Here, assuming T is Double
-                    matrix[i][j] = (T) Double.valueOf(random.nextDouble());
+                    matrix[i][j] = (T) Integer.valueOf(random.nextInt(100) + 1); //1-100
+
                 }
             }
         }
@@ -157,6 +156,13 @@ public class Matrixx {
 
     public static void main(String[]arg)
     {
+        Matrix<Integer> matrix = new Matrix<>(3, 3);
 
+        // Заповнення матриці з клавіатури
+        matrix.fillFromKeyboard();
+        matrix.display();
+
+        matrix.fillRandomly();
+        matrix.display();
     }
 }
