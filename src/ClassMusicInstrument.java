@@ -9,6 +9,11 @@ public class ClassMusicInstrument {
        Ukulele ukulele=new Ukulele("Ukulele1","Description ukulele1");
        ukulele.history();
        ukulele.show();
+
+       Trombone trombone=new Trombone("Trombone","Desc of trombone");
+       trombone.history();
+      String str= trombone.getName();
+        System.out.println(str);
     }
     static public class MusicInstrument
     {
